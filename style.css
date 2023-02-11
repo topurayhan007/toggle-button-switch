@@ -3,6 +3,11 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
   background-color: #ffffff;
 }
 
@@ -10,13 +15,10 @@ body {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   row-gap: 2em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* ------------------------------------------- */
+/* Toggle Button CSS */
 
 input[type="checkbox"].toggle {
   opacity: 0;
@@ -39,7 +41,7 @@ input[type="checkbox"].toggle + label::before {
   width: 6.875em;
   height: 3.75em;
   border-radius: 2.1875em;
-  background-color: #ccc;
+  background-color: #eaeaea;
   outline: 1px solid rgb(131, 119, 119);
 }
 input[type="checkbox"].toggle + label::after {
@@ -65,11 +67,65 @@ input[type="checkbox"].toggle:focus + label::after {
 
 input[type="checkbox"].toggle:checked + label::before {
   /* background-color: rgb(158, 235, 5); */
-  background-color: rgb(4, 226, 255);
+  /* background-color: rgb(4, 226, 255); */
+  background-color: rgba(156, 234, 132, 255);
 }
 
 input[type="checkbox"].toggle:checked + label::after {
   /* left: 3.325em; */
   transform: translateX(95%);
   background-color: white;
+}
+
+/* --------------------------------------------- */
+/* Stripped & Filled CSS */
+.filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #5b3cd1;
+  opacity: 98%;
+  width: 8em;
+  height: 8em;
+}
+.striped {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgb(161, 0, 161),
+    rgb(161, 0, 161) 3px,
+    transparent 3px,
+    transparent 14px
+  );
+  position: absolute;
+  top: 14%;
+  left: 4%;
+  width: 8em;
+  height: 8em;
+  scale: 0.8;
+}
+
+.striped2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgb(161, 0, 161),
+    rgb(161, 0, 161) 2px,
+    transparent 2px,
+    transparent 14px
+  );
+  width: 8em;
+  height: 8em;
+}
+
+.filled2 {
+  background-color: #5b3cd1;
+  opacity: 98%;
+  position: absolute;
+  bottom: 14%;
+  right: 4%;
+  width: 8em;
+  height: 8em;
+  scale: 0.8;
 }
