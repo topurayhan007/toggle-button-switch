@@ -39,7 +39,6 @@ input[type="checkbox"].toggle + label::before {
   width: 6.875em;
   height: 3.75em;
   border-radius: 2.1875em;
-  margin-right: 0.25em;
   background-color: #ccc;
   outline: 1px solid rgb(131, 119, 119);
 }
@@ -65,7 +64,8 @@ input[type="checkbox"].toggle:focus + label::after {
 }
 
 input[type="checkbox"].toggle:checked + label::before {
-  background-color: rgb(158, 235, 5);
+  /* background-color: rgb(158, 235, 5); */
+  background-color: rgb(4, 226, 255);
 }
 
 input[type="checkbox"].toggle:checked + label::after {
