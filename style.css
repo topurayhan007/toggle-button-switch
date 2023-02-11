@@ -4,6 +4,7 @@
 
 body {
   height: 100vh;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   background: repeating-linear-gradient(
@@ -125,8 +126,8 @@ input[type="checkbox"].toggle:checked + label::after {
   background: repeating-linear-gradient(
     -45deg,
     rgb(161, 0, 161),
-    rgb(161, 0, 161) 2px,
-    transparent 2px,
+    rgb(161, 0, 161) 2.5px,
+    transparent 2.5px,
     transparent 14px
   );
   width: 8em;
